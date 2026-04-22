@@ -27,9 +27,21 @@ public class WeatherSummary {
         while(scan.hasNextDouble()){
             prints.add(scan.nextDouble());
         }
+
+        double max = prints.get(0);
+        double min = prints.get(0);
+
         for(int i=0; i<prints.size(); i++){
-            System.out.println(prints.get(i));
+            if(prints.get(i)>max){
+                max = prints.get(i);
+            }
+            else if(prints.get(i)<min){
+                min = prints.get(i);
+            }
         }
+
+         System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
 
     }
 }
