@@ -30,8 +30,10 @@ public class WeatherSummary {
 
         double max = prints.get(0);
         double min = prints.get(0);
+        double sum = 0.0;
 
         for(int i=0; i<prints.size(); i++){
+            sum += prints.get(i);
             if(prints.get(i)>max){
                 max = prints.get(i);
             }
@@ -39,9 +41,11 @@ public class WeatherSummary {
                 min = prints.get(i);
             }
         }
+        double average = sum/prints.size();
 
-         System.out.println("Max: " + max);
+        System.out.println("Max: " + max);
         System.out.println("Min: " + min);
+        System.out.println("Average: " + average);
 
     }
 }
